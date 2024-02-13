@@ -77,5 +77,8 @@ export default class Utils {
     static eventGallery(_element: Element) {
         _eventDispatcher(_element, 'pwa-install-gallery-event', 'App install gallery showed');
     }
+    static installClicked(_element: Element) {
+        _eventDispatcher(_element, 'pwa-install-button-clicked', 'Install clicked');
+    }
     
 }

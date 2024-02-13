@@ -66,6 +66,7 @@ export class PWAInstallElement extends LitElement {
 	/** @internal */
 	private _install = {
 		handleEvent: () => {
+			Utils.installClicked(this);
 			if (window.defferedPromptEvent) {
 				this.hideDialog();
 				window.defferedPromptEvent.prompt();

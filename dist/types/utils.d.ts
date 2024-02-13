@@ -11,4 +11,5 @@ export default class Utils {
     static eventInstallAvailable(_element: Element): void;
     static eventInstallHowTo(_element: Element): void;
     static eventGallery(_element: Element): void;
+    static installClicked(_element: Element): void;
 }
