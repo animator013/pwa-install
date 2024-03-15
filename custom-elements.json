@@ -187,6 +187,15 @@
             },
             {
               "kind": "field",
+              "name": "installEv",
+              "type": {
+                "text": "object"
+              },
+              "privacy": "public",
+              "default": "{\r\n\t\thandleEvent: () => {\r\n\t\t\tUtils.installClicked(this);\r\n\t\t},\r\n\t\tpassive: true\r\n\t}"
+            },
+            {
+              "kind": "field",
               "name": "hideDialog",
               "privacy": "public"
             },

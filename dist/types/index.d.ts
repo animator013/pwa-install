@@ -27,6 +27,10 @@ export declare class PWAInstallElement extends LitElement {
     private _galleryRequested;
     private _install;
     install: () => void;
+    installEv: {
+        handleEvent: () => void;
+        passive: boolean;
+    };
     private _hideDialog;
     private _hideDialogUser;
     hideDialog: () => void;

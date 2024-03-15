@@ -66,7 +66,6 @@ export class PWAInstallElement extends LitElement {
 	/** @internal */
 	private _install = {
 		handleEvent: () => {
-			Utils.installClicked(this);
 			if (window.defferedPromptEvent) {
 				this.hideDialog();
 				window.defferedPromptEvent.prompt();
@@ -91,6 +90,14 @@ export class PWAInstallElement extends LitElement {
 		else
 			this._install.handleEvent();
 	}
+
+	public installEv = {
+		handleEvent: () => {
+			Utils.installClicked(this);
+		},
+		passive: true
+	}
+	
 	/** @internal */
 	private _hideDialog = {
 		handleEvent: () => {
@@ -289,7 +296,7 @@ export class PWAInstallElement extends LitElement {
 				this._manifest,
 				this.isInstallAvailable && !this.isDialogHidden,
 				this._hideDialogUser,
-				this._install,
+				this.installEv,
 				this._toggleGallery,
 				this._galleryRequested
 			)}`;
